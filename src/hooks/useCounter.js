@@ -13,7 +13,7 @@ const useCounter = ( initialState = 10 ) => {
         setState( state - factor );
     }
     return {
-        state,
+        counter: state,
         increment,
         decrement,
         reset

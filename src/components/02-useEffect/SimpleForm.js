@@ -3,7 +3,8 @@ import './effects.css'
 import Message from './Message'
 
 const SimpleForm = () => {
-    // Jamas meter el useState() dentro de un condicional
+    // Jamas meter el useState() dentro de un condicional,
+    // siempre usar los hooks en lo mas alto del componente
     const [formState, setFormState] = useState({
         name: '',
         email: ''
@@ -52,7 +53,7 @@ const SimpleForm = () => {
                     onChange={ handleInputChange }
                 />
             </div>
-            { (name === '123') && <Message />}
+            { (name === 'richi') && <Message />}
         </Fragment>
     )
 }
