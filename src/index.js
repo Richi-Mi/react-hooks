@@ -1,7 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Padre from './components/07-tarea-memo/Padre';
+import MainApp from './components/09-useContext/MainApp';
 
+// import TodoApp from './components/08-useReducer/TodoApp';
+// import Padre from './components/07-tarea-memo/Padre';
 // import CallbackHook from './components/06-memos/CallbackHook';
 // import MemoHook from './components/06-memos/MemoHook';
 // import Memorize from './components/06-memos/Memorize';
@@ -15,4 +17,8 @@ import Padre from './components/07-tarea-memo/Padre';
 // import CounterApp from './components/01-useState/CounterApp';
 // import HookApp from './HookApp';
 
-ReactDOM.render( <Padre />, document.getElementById('main') );
+// import './components/08-useReducer/intro-reducer'
+
+// # npm audit fix
+
+ReactDOM.render( <MainApp />, document.getElementById('main') );
