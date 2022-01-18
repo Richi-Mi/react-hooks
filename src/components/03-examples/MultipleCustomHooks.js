@@ -14,7 +14,7 @@ const MultipleCustomHooks = () => {
     // !!null == false  
     
     return (
-        <div>
+        <div className='multiple_component'>
             <h1> Breakin Bad Quotes </h1>
             <hr />
 
