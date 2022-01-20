@@ -1,29 +1,27 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Fragment } from 'react/cjs/react.development';
 import PropTypes from 'prop-types';
+import useForm from '../../hooks/useForm';
 
 const TodoAdd = ({ handleAddTodo }) => {
-    const [inputValue, setInputValue] = useState('');
-    
-    const handleInputChange = (ev) => {
-        setInputValue(ev.target.value);
-    }
+    const [{ description }, handleInputChange, reset ] = useForm({
+        description: ''
+    });
 
-    const handleSubmit = (ev) => {
+    const handleSubmit = ( ev, descrip = description ) => {
         ev.preventDefault();
 
-        if (inputValue.trim().length <= 1) {
+        if (descrip.trim().length <= 1) {
             return;
         }
 
         const newTodo = {
             id: new Date().getTime(),
-            desc: inputValue,
+            desc: descrip,
             done: false
         }
         
-        setInputValue('');
-
+        reset();
         handleAddTodo( newTodo );
     }
 
@@ -39,8 +37,8 @@ const TodoAdd = ({ handleAddTodo }) => {
                     placeholder='Aprender...'
                     autoComplete='off'
                     className='form-control mb-3'
-                    onChange={handleInputChange}
-                    value={inputValue}
+                    onChange={ ( ev ) => handleInputChange( ev ) }
+                    value={ description }
                 />
                 <button
                     className='btn btn-outline-primary form-control'

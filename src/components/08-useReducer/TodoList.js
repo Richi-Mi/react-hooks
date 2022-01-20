@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import TodoListItem from './TodoListItem';
 
 const TodoList = React.memo(({ todos, handleDelete, handleToggle }) => {
-    console.log(' - Renderize TodoList')
     return (
         <ul className='list-group list-group-flush'>
             {

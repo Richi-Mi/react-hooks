@@ -13,7 +13,6 @@ import todoReducer from './todoReducer';
 // const [state, dispatch] = useReducer(reducer, initialState, init)
 
 const init = () => {
-    console.log(' - Renderize TodoApp')
     const toodos = JSON.parse(localStorage.getItem('todos'));
 
     return toodos !== null ? toodos : []

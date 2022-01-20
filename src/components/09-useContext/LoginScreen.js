@@ -2,13 +2,12 @@ import React, { useContext } from 'react'
 import { UserContext } from './UserContext';
 
 const LoginScreen = () => {
+    // 1. Obtener la referencia al userContext
+    const { setUser, user } = useContext( UserContext );
     const usuario = {
         id: new Date().getTime(),
-        nombre: 'Ricardo',
-        email: 'joseanakin@outlook.es'
+        ...user
     }
-    // 1. Obtener la referencia al userContext
-    const { setUser } = useContext( UserContext );
     // 2. setUser 
     return (
         <div>

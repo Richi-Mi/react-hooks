@@ -1,7 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[` * Pruebas en el componente <MultipleCustomHooks />   - Debe de mostrar el componente correctamente 1`] = `
-<div>
+<div
+  className="multiple_component"
+>
   <h1>
      Breakin Bad Quotes 
   </h1>
